@@ -12,9 +12,11 @@ const JUMP_SPEED: float = -300.0
 const RUN_SPEED: float = 120.0
 const MAX_FALL: float = 350.0
 
-
 func _ready() -> void:
 	pass
+	
+func _enter_tree() -> void:
+	add_to_group(Constants.PLAYER_GROUP)
 	
 func _physics_process(delta: float) -> void:
 	velocity.y += GRAVITY * delta
