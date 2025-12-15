@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name Player
 
-@export var fell_off_y: float = 800.0
+@export var fell_off_y: float = 150.0
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var debug_label: Label = $DebugLabel
