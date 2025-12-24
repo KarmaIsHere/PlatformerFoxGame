@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://xo8dxb40ga3y"]
+[gd_scene load_steps=13 format=4 uid="uid://xo8dxb40ga3y"]
 
 [ext_resource type="Texture2D" uid="uid://wel0xm0451oa" path="res://assets/tiles/Terrain (16x16).png" id="1_5ufo3"]
 [ext_resource type="Script" uid="uid://cfuqokdk8mcwm" path="res://Scenes/LevelBase/LevelBase.gd" id="1_lmtt4"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://by7khger6xgg1" path="res://Scenes/ObjectMaker/ObjectMaker.tscn" id="5_ooqsx"]
 [ext_resource type="AudioStream" uid="uid://bm7ltqf6ejki1" path="res://assets/sound/Flowing Rocks.ogg" id="6_ooqsx"]
 [ext_resource type="PackedScene" uid="uid://dmqogpkmdwu53" path="res://Scenes/Enemies/Eagle/Eagle.tscn" id="7_txgif"]
+[ext_resource type="PackedScene" uid="uid://ks6msse1y818" path="res://Scenes/Hud/Hud.tscn" id="8_o536s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bgw71"]
 resource_name = "Platforms"
@@ -411,3 +412,7 @@ parameters/looping = false
 
 [node name="Eagle" parent="." instance=ExtResource("7_txgif")]
 position = Vector2(297, -222)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Hud" parent="CanvasLayer" instance=ExtResource("8_o536s")]
